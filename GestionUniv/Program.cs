@@ -26,4 +26,18 @@ app.MapControllerRoute(
     .WithStaticAssets();
 
 
+// Middleware personnalisé (démonstration du pipeline) : il s'exécute AVANT le routage.
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["X-Pipeline"] = "Middleware -> Routage -> Controleur -> Vue Razor";
+    await next();
+});
+
+app.UseRouting();
+
+//  Routage par convention : {controller=Home}/{action=Index}/{id?}
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.Run();
