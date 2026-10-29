@@ -57,26 +57,7 @@ Ensuite, ouvrez l'URL affichée par ASP.NET Core dans le navigateur, généralem
 - https://localhost:5001
 - http://localhost:5000
 
-## Structure du projet
 
-```text
-GestionUniv/
-├── Controllers/
-│   └── HomeController.cs
-├── Models/
-│   └── ErrorViewModel.cs
-├── Views/
-│   ├── Home/
-│   ├── Shared/
-│   ├── _ViewImports.cshtml
-│   └── _ViewStart.cshtml
-├── wwwroot/
-├── appsettings.json
-├── appsettings.Development.json
-├── Program.cs
-├── GestionUniv.csproj
-└── README.md
-```
 
 ## Fonctionnalités principales
 
